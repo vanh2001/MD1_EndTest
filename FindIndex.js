@@ -1,19 +1,19 @@
-let arr = [1,2,3,4,5,6,7,8,9];
-function findIndex() {
-    let a = +prompt('Mời bạn nhập giá trị: ');
+//Cách 1:
+function findIndex(arr ,a) {
+    // a = +prompt('Mời bạn nhập giá trị: ');
+    let array = '';
     for (let i = 0; i < arr.length; i++) {
         if (a === arr[i]){
-            alert('Phần tử: ' + arr[i] + ' nằm ở vị trí: ' +i +' trong mảng');
-            console.log(arr[i]);
-            break;
+            array = 'Phần tử: ' + arr[i] + ' nằm ở vị trí: ' +i +' trong mảng';
         }
-        // else {
-        //     alert('Không có phần tử mà bạn đang tìm');
-        //     // break;
-        // }
+    }
+    if (array == 0){
+        return alert('Không có phần tử nào!')
+    }else {
+        return alert(array);
     }
 }
-findIndex();
+findIndex([1,2,3,4,5,6,7,8,9],5);
 
 //Cách 2:
 function findIndex2() {
